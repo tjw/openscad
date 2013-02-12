@@ -193,7 +193,7 @@ static bool point_on_line(double *p1, double *p2, double *p3)
 	rot: CLOCKWISE rotation around positive Z axis
  */
 
-void dxf_tesselate(PolySet *ps, DxfData &dxf, double rot, bool up, bool do_triangle_splitting, double h)
+void dxf_tesselate(PolySet *ps, DxfData &dxf, double rot, double scale, bool up, bool do_triangle_splitting, double h)
 {
 	GLUtesselator *tobj = gluNewTess();
 
@@ -236,8 +236,8 @@ void dxf_tesselate(PolySet *ps, DxfData &dxf, double rot, bool up, bool do_trian
 												 dxf.points[dxf.paths[i].indices[j]][1],
 												 h) = QPair<int,int>(i, j);
 			vl.append(tess_vdata());
-			vl.last().v[0] = dxf.points[dxf.paths[i].indices[j]][0];
-			vl.last().v[1] = dxf.points[dxf.paths[i].indices[j]][1];
+			vl.last().v[0] = scale * dxf.points[dxf.paths[i].indices[j]][0];
+			vl.last().v[1] = scale * dxf.points[dxf.paths[i].indices[j]][1];
 			vl.last().v[2] = h;
 			gluTessVertex(tobj, vl.last().v, vl.last().v);
 		}
