@@ -111,6 +111,8 @@ To pull the MCAD library (http://reprap.org/wiki/MCAD), do the following:
     git submodule init
     git submodule update
 
+_NOTE:_ If you fork openscad, you will also need to fork MCAD in order for the submodule to update correctly.
+
 ### Building for Mac OS X
 
 Prerequisites:
