@@ -114,7 +114,7 @@ To pull the MCAD library (http://reprap.org/wiki/MCAD), do the following:
 ### Building for Mac OS X
 
 Prerequisites:
-* XCode, including XCode command-line tools (install from XCode Preferences).
+* Xcode, including Xcode command-line tools (install from Xcode Preferences).
 * [CMake](http://cmake.org), which can be installed manually or through MacPorts/homebrew.
 
 Then after you've cloned this git repository, run the script that sets up the
