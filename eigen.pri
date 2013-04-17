@@ -50,12 +50,12 @@ isEmpty(EIGEN_INCLUDEPATH) {
   freebsd-g++: EIGEN_INCLUDEPATH = /usr/local/include/eigen3
   netbsd*: EIGEN_INCLUDEPATH = /usr/pkg/include/eigen3
   linux*|hurd*|unix: EIGEN_INCLUDEPATH = /usr/include/eigen3
-  macx: EIGEN_INCLUDEPATH = /opt/local/include/eigen3
+  macx: EIGEN_INCLUDEPATH = /usr/local/include/eigen3
   !exists($$EIGEN_INCLUDEPATH) {
     freebsd-g++: EIGEN_INCLUDEPATH = /usr/local/include/eigen2
     netbsd*: EIGEN_INCLUDEPATH = /usr/pkg/include/eigen2
     linux*|hurd*|unix*: EIGEN_INCLUDEPATH = /usr/include/eigen2
-    macx: EIGEN_INCLUDEPATH = /opt/local/include/eigen2
+    macx: EIGEN_INCLUDEPATH = /usr/local/include/eigen2
   }
 }
 
