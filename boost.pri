@@ -60,7 +60,13 @@ boost {
   }
 
   isEmpty(BOOST_LINK_FLAGS) {
-    unix|macx {
+    macx {
+      BOOST_LINK_FLAGS = -lboost_thread-mt -lboost_program_options-mt -lboost_filesystem-mt -lboost_system-mt -lboost_regex-mt
+    }
+  }
+
+  isEmpty(BOOST_LINK_FLAGS) {
+    unix {
       BOOST_LINK_FLAGS = -lboost_thread -lboost_program_options -lboost_filesystem -lboost_system -lboost_regex
     }
   }
