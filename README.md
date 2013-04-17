@@ -122,7 +122,7 @@ Prerequisites:
 Then after you've cloned this git repository, run the script that sets up the
 environment variables.
 
-    source setenv_mjau.sh
+    source setenv_mac-clang.sh
 
 Then run the script to compile all the prerequisite libraries above:
 
